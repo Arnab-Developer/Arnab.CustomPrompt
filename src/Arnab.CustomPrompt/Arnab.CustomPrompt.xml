@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Arnab.CustomPrompt</name>
+    </assembly>
+    <members>
+        <member name="T:Arnab.CustomPrompt.DataProviders.DataProvider">
+            <summary>Data provider.</summary>
+        </member>
+        <member name="M:Arnab.CustomPrompt.DataProviders.DataProvider.GetData">
+            <summary>Get data.</summary>
+        </member>
+        <member name="T:Arnab.CustomPrompt.DataProviders.FolderDataProvider">
+            <summary>Folder data provider.</summary>
+        </member>
+        <member name="M:Arnab.CustomPrompt.DataProviders.FolderDataProvider.GetData">
+            <summary>Get data.</summary>
+        </member>
+        <member name="T:Arnab.CustomPrompt.DataProviders.GitDataProvider">
+            <summary>Git data provider.</summary>
+        </member>
+        <member name="M:Arnab.CustomPrompt.DataProviders.GitDataProvider.GetData">
+            <summary>Get data.</summary>
+        </member>
+        <member name="T:Arnab.CustomPrompt.DataProviders.IDataProvider">
+            <summary>Data provider.</summary>
+        </member>
+        <member name="M:Arnab.CustomPrompt.DataProviders.IDataProvider.GetData">
+            <summary>Get data.</summary>
+        </member>
+        <member name="T:Arnab.CustomPrompt.DataProviders.UserDataProvider">
+            <summary>User data provider.</summary>
+        </member>
+        <member name="M:Arnab.CustomPrompt.DataProviders.UserDataProvider.GetData">
+            <summary>Get data.</summary>
+        </member>
+        <member name="T:Arnab.CustomPrompt.SectionProviders.FolderSectionProvider">
+            <summary>Folder section provider.</summary>
+        </member>
+        <member name="M:Arnab.CustomPrompt.SectionProviders.FolderSectionProvider.#ctor(Arnab.CustomPrompt.DataProviders.IDataProvider)">
+            <summary>Folder section provider.</summary>
+        </member>
+        <member name="M:Arnab.CustomPrompt.SectionProviders.FolderSectionProvider.GetSection">
+            <summary>Get section.</summary>
+        </member>
+        <member name="T:Arnab.CustomPrompt.SectionProviders.GitSectionProvider">
+            <summary>
+            Git section provider.
+            </summary>
+        </member>
+        <member name="M:Arnab.CustomPrompt.SectionProviders.GitSectionProvider.#ctor(Arnab.CustomPrompt.DataProviders.IDataProvider)">
+            <summary>
+            Git section provider.
+            </summary>
+        </member>
+        <member name="M:Arnab.CustomPrompt.SectionProviders.GitSectionProvider.GetSection">
+            <summary>
+            Get section.
+            </summary>
+        </member>
+        <member name="T:Arnab.CustomPrompt.SectionProviders.ISectionProvider">
+            <summary>Section provider.</summary>
+        </member>
+        <member name="M:Arnab.CustomPrompt.SectionProviders.ISectionProvider.GetSection">
+            <summary>Get section.</summary>
+        </member>
+        <member name="T:Arnab.CustomPrompt.SectionProviders.SectionProvider">
+            <summary>Section provider.</summary>
+        </member>
+        <member name="M:Arnab.CustomPrompt.SectionProviders.SectionProvider.#ctor(Arnab.CustomPrompt.DataProviders.IDataProvider)">
+            <summary>Section provider.</summary>
+        </member>
+        <member name="F:Arnab.CustomPrompt.SectionProviders.SectionProvider._dataProvider">
+            <summary>Data provider.</summary>
+        </member>
+        <member name="M:Arnab.CustomPrompt.SectionProviders.SectionProvider.GetSection">
+            <summary>Get section.</summary>
+        </member>
+        <member name="T:Arnab.CustomPrompt.SectionProviders.UserSectionProvider">
+            <summary>User section provider.</summary>
+        </member>
+        <member name="M:Arnab.CustomPrompt.SectionProviders.UserSectionProvider.#ctor(Arnab.CustomPrompt.DataProviders.IDataProvider)">
+            <summary>User section provider.</summary>
+        </member>
+        <member name="M:Arnab.CustomPrompt.SectionProviders.UserSectionProvider.GetSection">
+            <summary>Get section.</summary>
+        </member>
+        <member name="T:Arnab.CustomPrompt.Services.IPromptService">
+            <summary>Prompt service.</summary>
+        </member>
+        <member name="M:Arnab.CustomPrompt.Services.IPromptService.GetPrompt">
+            <summary>Get the prompt.</summary>
+        </member>
+        <member name="T:Arnab.CustomPrompt.Services.PromptService">
+            <summary>Prompt service.</summary>
+        </member>
+        <member name="M:Arnab.CustomPrompt.Services.PromptService.#ctor(System.Collections.Generic.IEnumerable{Arnab.CustomPrompt.SectionProviders.ISectionProvider})">
+            <summary>Prompt service.</summary>
+        </member>
+        <member name="M:Arnab.CustomPrompt.Services.PromptService.GetPrompt">
+            <summary>Get the prompt.</summary>
+        </member>
+    </members>
+</doc>

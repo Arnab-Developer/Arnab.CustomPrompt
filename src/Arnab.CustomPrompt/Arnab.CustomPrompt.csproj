@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Authors>Arnab Roy Chowdhury</Authors>
+    <Description>This is a library to create a custom prompt.</Description>
+    <Copyright>Copyright (c) 2025 Arnab Roy Chowdhury</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/Arnab-Developer/Arnab.CustomPrompt</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Arnab-Developer/Arnab.CustomPrompt</RepositoryUrl>
+    <PackageTags>prompt,utility</PackageTags>
+    <PackageReleaseNotes>https://github.com/Arnab-Developer/Arnab.CustomPrompt/releases</PackageReleaseNotes>
+    <Version>0.0.1</Version>
+    <DocumentationFile>Arnab.CustomPrompt.xml</DocumentationFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+  
+</Project>
