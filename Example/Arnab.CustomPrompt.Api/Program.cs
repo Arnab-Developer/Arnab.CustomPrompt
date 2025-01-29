@@ -3,7 +3,6 @@ using Arnab.CustomPrompt.SectionProviders;
 using Arnab.CustomPrompt.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-
 var app = builder.Build();
 
 app.MapGet("/get-prompt", () =>
