@@ -44,19 +44,13 @@
             <summary>Get section.</summary>
         </member>
         <member name="T:Arnab.CustomPrompt.SectionProviders.GitSectionProvider">
-            <summary>
-            Git section provider.
-            </summary>
+            <summary>Git section provider.</summary>
         </member>
         <member name="M:Arnab.CustomPrompt.SectionProviders.GitSectionProvider.#ctor(Arnab.CustomPrompt.DataProviders.IDataProvider)">
-            <summary>
-            Git section provider.
-            </summary>
+            <summary>Git section provider.</summary>
         </member>
         <member name="M:Arnab.CustomPrompt.SectionProviders.GitSectionProvider.GetSection">
-            <summary>
-            Get section.
-            </summary>
+            <summary>Get section.</summary>
         </member>
         <member name="T:Arnab.CustomPrompt.SectionProviders.ISectionProvider">
             <summary>Section provider.</summary>
