@@ -1,32 +1,32 @@
-var builder = WebApplication.CreateBuilder(args);
+using Arnab.CustomPrompt.DataProviders;
+using Arnab.CustomPrompt.SectionProviders;
+using Arnab.CustomPrompt.Services;
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args);
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-
-var summaries = new[]
+app.MapGet("/get-prompt", () =>
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+    var userDataProvider = new UserDataProvider();
+    var folderDataProvider = new FolderDataProvider();
+    var gitDataProvider = new GitDataProvider();
 
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
+    var userSectionProvider = new UserSectionProvider(userDataProvider);
+    var folderSectionProvider = new FolderSectionProvider(folderDataProvider);
+    var gitSectionProvider = new GitSectionProvider(gitDataProvider);
+
+    var sectionProviders = new List<ISectionProvider>
+    {
+        userSectionProvider,
+        folderSectionProvider,
+        gitSectionProvider
+    };
+
+    var promptService = new PromptService(sectionProviders);
+    var prompt = promptService.GetPrompt();
+
+    return Results.Ok(prompt);
 });
 
 app.Run();
-
-internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
