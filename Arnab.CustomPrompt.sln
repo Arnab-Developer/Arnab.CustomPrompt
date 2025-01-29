@@ -23,6 +23,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.github\workflows\release.yml = .github\workflows\release.yml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "example", "example", "{B7F4F5AA-66BD-4471-83C8-F357ACA6088C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arnab.CustomPrompt.Api", "example\Arnab.CustomPrompt.Api\Arnab.CustomPrompt.Api.csproj", "{3245B4E4-CA78-493F-B19F-59679D440A57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +41,10 @@ Global
 		{C4E87D7D-FFB2-4D16-A0D8-65522A3ACD5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4E87D7D-FFB2-4D16-A0D8-65522A3ACD5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4E87D7D-FFB2-4D16-A0D8-65522A3ACD5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3245B4E4-CA78-493F-B19F-59679D440A57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3245B4E4-CA78-493F-B19F-59679D440A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3245B4E4-CA78-493F-B19F-59679D440A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3245B4E4-CA78-493F-B19F-59679D440A57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +52,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D4773A08-AEFC-40D4-9B68-92369A3B9133} = {3E76C2ED-9D76-43E8-9499-EDA30F64BD42}
 		{C4E87D7D-FFB2-4D16-A0D8-65522A3ACD5C} = {7D651DE1-8F1B-4EDB-9BC2-CF75F14A590B}
+		{3245B4E4-CA78-493F-B19F-59679D440A57} = {B7F4F5AA-66BD-4471-83C8-F357ACA6088C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13B13168-8277-43FD-B322-4A3A906FA156}
