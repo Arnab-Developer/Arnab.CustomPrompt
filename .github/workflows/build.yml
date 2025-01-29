@@ -34,7 +34,7 @@ jobs:
       run: dotnet test --configuration ${{ env.CONFIGURATION }} --no-build
 
     - name: Create nuget package
-      run: dotnet pack --configuration ${{ env.CONFIGURATION }} --no-restore --no-build
+      run: dotnet pack "src/Arnab.CustomPrompt/Arnab.CustomPrompt.csproj" --configuration ${{ env.CONFIGURATION }} --no-restore --no-build
 
   codeql-analysis:    
     name: CodeQL analysis
