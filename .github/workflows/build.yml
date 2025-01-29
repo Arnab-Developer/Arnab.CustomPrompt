@@ -28,13 +28,17 @@ jobs:
       run: dotnet restore --locked-mode
 
     - name: Build
-      run: dotnet build --configuration ${{ env.CONFIGURATION }} --no-restore
+      run: dotnet build -c ${{ env.CONFIGURATION }} --no-restore
 
     - name: Test
-      run: dotnet test --configuration ${{ env.CONFIGURATION }} --no-build
+      run: dotnet test -c ${{ env.CONFIGURATION }} --no-build
 
     - name: Create nuget package
-      run: dotnet pack "src/Arnab.CustomPrompt/Arnab.CustomPrompt.csproj" --configuration ${{ env.CONFIGURATION }} --no-restore --no-build
+      run: |
+        dotnet pack "src/Arnab.CustomPrompt/Arnab.CustomPrompt.csproj" \
+          -c ${{ env.CONFIGURATION }} \
+          --no-restore \
+          --no-build
 
   codeql-analysis:    
     name: CodeQL analysis
