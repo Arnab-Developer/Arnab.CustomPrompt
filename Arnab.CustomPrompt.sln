@@ -25,7 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "example", "example", "{B7F4F5AA-66BD-4471-83C8-F357ACA6088C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arnab.CustomPrompt.Api", "Example\Arnab.CustomPrompt.Api\Arnab.CustomPrompt.Api.csproj", "{3245B4E4-CA78-493F-B19F-59679D440A57}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arnab.CustomPrompt.Api", "example\Arnab.CustomPrompt.Api\Arnab.CustomPrompt.Api.csproj", "{3245B4E4-CA78-493F-B19F-59679D440A57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
