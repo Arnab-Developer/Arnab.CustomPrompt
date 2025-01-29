@@ -25,16 +25,16 @@ jobs:
         dotnet-version: ${{ env.DOTNET_VERSION }}
         
     - name: Restore
-      run: dotnet restore
+      run: dotnet restore --locked-mode
 
     - name: Build
-      run: dotnet build --configuration ${{ env.CONFIGURATION }}
+      run: dotnet build --configuration ${{ env.CONFIGURATION }} --no-restore
 
     - name: Test
-      run: dotnet test --configuration ${{ env.CONFIGURATION }}
+      run: dotnet test --configuration ${{ env.CONFIGURATION }} --no-build
 
     - name: Create nuget package
-      run: dotnet pack --configuration ${{ env.CONFIGURATION }}
+      run: dotnet pack --configuration ${{ env.CONFIGURATION }} --no-restore --no-build
 
   codeql-analysis:    
     name: CodeQL analysis
