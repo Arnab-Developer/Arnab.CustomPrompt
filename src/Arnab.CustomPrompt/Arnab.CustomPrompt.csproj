@@ -9,7 +9,7 @@
     <RepositoryUrl>https://github.com/Arnab-Developer/Arnab.CustomPrompt</RepositoryUrl>
     <PackageTags>prompt,utility</PackageTags>
     <PackageReleaseNotes>https://github.com/Arnab-Developer/Arnab.CustomPrompt/releases</PackageReleaseNotes>
-    <Version>0.0.3</Version>
+    <Version>0.0.4</Version>
     <DocumentationFile>Arnab.CustomPrompt.xml</DocumentationFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <IncludeSymbols>true</IncludeSymbols>
