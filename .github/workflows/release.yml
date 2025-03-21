@@ -5,10 +5,6 @@ on:
     types: [ published ]
   workflow_dispatch:
 
-env:
-  DOTNET_VERSION: 9.0.x
-  CONFIGURATION: Release
-
 jobs:
   nuget-org-push:
     runs-on: ubuntu-latest
@@ -20,23 +16,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+    - name: Create package
+      uses: ./.github/actions/create-package
       with:
-        dotnet-version: ${{ env.DOTNET_VERSION }}
-        
-    - name: Restore
-      run: dotnet restore --locked-mode
-
-    - name: Build
-      run: dotnet build -c ${{ env.CONFIGURATION }} --no-restore
-
-    - name: Create nuget package
-      run: | 
-        dotnet pack "src/Arnab.CustomPrompt/Arnab.CustomPrompt.csproj" \
-          -c ${{ env.CONFIGURATION }} \
-          --no-restore \
-          --no-build
+        dotnet-version: 9.0.x
 
     - name: Push nuget package
       run: |
