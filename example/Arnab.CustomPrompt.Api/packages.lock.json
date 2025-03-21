@@ -5,6 +5,11 @@
       "arnab.customprompt": {
         "type": "Project"
       }
+    },
+    "net9.0": {
+      "arnab.customprompt": {
+        "type": "Project"
+      }
     }
   }
 }
