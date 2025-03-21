@@ -13,6 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arnab.CustomPrompt.Test", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{389D8F45-6B6D-4A81-97D9-323E183E86F2}"
 	ProjectSection(SolutionItems) = preProject
+		.github\actions\create-package\action.yml = .github\actions\create-package\action.yml
 		.github\workflows\build.yml = .github\workflows\build.yml
 		.github\workflows\dependency-review.yml = .github\workflows\dependency-review.yml
 		Directory.Build.props = Directory.Build.props
