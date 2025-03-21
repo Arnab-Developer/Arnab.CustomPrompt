@@ -9,7 +9,6 @@ on:
 
 env:
   DOTNET_VERSION: 9.0.x
-  CONFIGURATION: Release
 
 jobs:
   build:    
@@ -19,26 +18,10 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
       
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
+    - name: Create package
+      uses: actions/create-package
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
-        
-    - name: Restore
-      run: dotnet restore --locked-mode
-
-    - name: Build
-      run: dotnet build -c ${{ env.CONFIGURATION }} --no-restore
-
-    - name: Test
-      run: dotnet test -c ${{ env.CONFIGURATION }} --no-build
-
-    - name: Create nuget package
-      run: |
-        dotnet pack "src/Arnab.CustomPrompt/Arnab.CustomPrompt.csproj" \
-          -c ${{ env.CONFIGURATION }} \
-          --no-restore \
-          --no-build
 
   codeql-analysis:    
     name: CodeQL analysis
